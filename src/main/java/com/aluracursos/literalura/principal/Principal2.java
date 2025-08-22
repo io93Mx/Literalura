@@ -57,9 +57,9 @@ package com.aluracursos.literalura.principal;// package com.aluracursos.literalu
 //         /// 
 //         /// si no esta ese libro que se buscoo si es null
 //         if (datosLibro != null) {
-//             ///no inicializamos el libro, debemos investigar si nuestro autor ya esta en nuestra base de datos para agregarle el libro
+//             ///no inicializamos el libro, debemos investigar si nuestro nombre ya esta en nuestra base de datos para agregarle el libro
 //             Libro libro;
-//             DatosAutor datosAutor = datosLibro.autor().get(0);
+//             DatosAutor datosAutor = datosLibro.nombre().get(0);
 //             Autor autorExistente = autorRepositorio.findByNombre(datosAutor.nombre());
 
 //             if (autorExistente != null) {
@@ -91,7 +91,7 @@ package com.aluracursos.literalura.principal;// package com.aluracursos.literalu
 //         /// convertimos los datos del json de la api a nuestro record datos
 //         Datos datosBusqueda = conversor.obtenerDatos(json, Datos.class);
 //         ///muestra toda la lista de libros de la api, debemos 
-//         ///establecer filtro de los atributos del libro de nuestra clase para el primer resultado, autor y libro
+//         ///establecer filtro de los atributos del libro de nuestra clase para el primer resultado, nombre y libro
 //         /// implementando resultados del record Datos.java, que es como un get de los datos de results
 //         /// muestra error por que necesita opcional, ya que puede o no existir el titulo buscado
 //         /// antes: DatosLibro libroBuscado = datosBusqueda.resultados()...
