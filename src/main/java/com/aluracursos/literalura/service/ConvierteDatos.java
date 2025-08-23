@@ -1,7 +1,6 @@
 package com.aluracursos.literalura.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ConvierteDatos implements IConvierteDatos {
@@ -13,10 +12,7 @@ public class ConvierteDatos implements IConvierteDatos {
         try {
             return objectMapper.readValue(json, clase);
         } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Error al convertir JSON a objeto: " + e.getMessage(), e);
         }
     }
-    
-    //public DatosLibro obtenerDatos(String json);
-
 }

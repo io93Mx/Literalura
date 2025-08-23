@@ -1,5 +1,9 @@
 package com.aluracursos.literalura;
 
+import com.aluracursos.literalura.repository.AutorRepository;
+import com.aluracursos.literalura.repository.LibroRepository;
+import com.aluracursos.literalura.service.AutorService;
+import com.aluracursos.literalura.service.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -39,8 +43,6 @@ public class LiteraluraAplicacion implements CommandLineRunner{
 		
 		Principal principal = new Principal();
 		principal.muestraElMenu();
-		
-
 	}
 
 }
