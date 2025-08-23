@@ -84,7 +84,7 @@ public class Principal {
     }
 
     private void mostrarLibros() {
-        List<Libro> libros = LibroService.getAllBooks();
+        List<Libro> libros = libroService.getAllBooks();
         mostrarLibros(libros);
     }
 
@@ -98,6 +98,7 @@ public class Principal {
         });
         System.out.println("-------------------------------------------\n");
     }
+
 
     private void mostrarAutoreres() {
         List<Autor> autores = autorService.getAllAuthors();
